@@ -1,13 +1,13 @@
 // ==UserScript==
-// @name         Mturk Engine
+// @name         Mturk Engine Rover
 // @namespace    https://github.com/Anveio/mturk-engine/
-// @version      1.8.3
+// @version      0.0.2-dev.0
 // @description  Earn money more efficiently on Amazon's Mechanical Turk work platform.
 // @author       Anveio (Shovon Hasan)
 // @license      MIT
 // @match        https://worker.mturk.com/?mturkengine
 // @match        https://www.mturk.com/?mturkengine
-// @require      https://cdn.rawgit.com/Anveio/mturk-engine/c6a7856f53b2fde7fd1838db210e1f0ff91b17fd/build/mturk-engine.latest.raw.user.js?raw=true
+// @require      https://cdn.jsdelivr.net/gh/jugheadeatsalot/mturk-engine@0.0.2-dev.0/build/mturk-engine.latest.raw.user.js?raw=true
 // @grant        none
 // ==/UserScript==
 
@@ -18,3 +18,4 @@
  * There you can view the source code, post issues, submit changes, suggest features, and download the latest version.
  * Changelogs are available at: https://github.com/Anveio/mturk-engine/releases
  */
+
