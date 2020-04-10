@@ -4,7 +4,7 @@ import {updateVersion, gitPush} from '../versioner';
 const newVersion = updateVersion();
 
 const constants = {
-  RAW_BUILD_FILE_FILEPATH: '../build/mturk-engine.latest.raw.user.js',
+  RAW_BUILD_FILE_FILEPATH: '../build/mturk-engine.latest.raw.js',
   CDN_BUILD_FILE_FILEPATH: '../build/mturk-engine.latest.user.js',
   VERSION_NUMBER: newVersion
 };
@@ -98,7 +98,7 @@ const cdnUserScriptBoilerPlate = `// ==UserScript==
 // @license      MIT
 // @match        https://worker.mturk.com/?mturkengine
 // @match        https://www.mturk.com/?mturkengine
-// @require      ${cdnUrl}/build/mturk-engine.latest.raw.user.js?raw=true
+// @require      ${cdnUrl}/build/mturk-engine.latest.raw.js?raw=true
 // @grant        none
 // ==/UserScript==
 
