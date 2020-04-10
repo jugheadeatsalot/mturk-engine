@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mturk Engine Rover (Raw)
 // @namespace    https://github.com/Anveio/mturk-engine/
-// @version      0.0.2-dev.8
+// @version      0.0.2-dev.9
 // @description  Earn money more efficiently on Amazon's Mechanical Turk work platform.
 // @author       Anveio (Shovon Hasan)
 // @license      MIT
