@@ -9,6 +9,8 @@ import { AppProvider as PolarisProvider } from '@shopify/polaris';
 import App from './components/App';
 import { createToastLayer } from 'utils/createToastLayer';
 
+import './Custom.css';
+
 // If not in development, kick off production specific DOM mutations.
 if (API_URL !== 'http://localhost:7777') {
   clearDom();
