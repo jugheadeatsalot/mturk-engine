@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { connect, Dispatch } from 'react-redux';
+import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
 import { Card, Stack, ButtonGroup, Button } from '@shopify/polaris';
 import { toggleSearchActive } from '../../actions/updateValue';
 import { RootState } from '../../types';

@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { connect, Dispatch } from 'react-redux';
+import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
 import { Popover, Button, Intent, Classes } from '@blueprintjs/core';
 import {
   Card,
@@ -84,7 +85,7 @@ class EditBonusButton extends React.PureComponent<OwnProps & Handlers, State> {
         onInteraction={(nextState: boolean) => this.toggleOpen(nextState)}
       >
         <Button
-        
+
           intent={Intent.PRIMARY}
           className={Classes.MINIMAL}
           icon="manually-entered-data"

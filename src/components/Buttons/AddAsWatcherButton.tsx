@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { RootState, HumanIntelligenceTask, GroupId } from '../../types';
 import { Button } from '@shopify/polaris';
-import { connect, Dispatch } from 'react-redux';
+import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
 import {
   AddWatcher,
   addWatcher,

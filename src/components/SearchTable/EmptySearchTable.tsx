@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { EmptyState } from '@shopify/polaris';
 
-import { connect, Dispatch } from 'react-redux';
+import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
 import { SearchAction, searchRequestSingular } from '../../actions/search';
 
 export interface Handlers {

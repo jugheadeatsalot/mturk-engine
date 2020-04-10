@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { connect, Dispatch } from 'react-redux';
+import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
 import { SearchResult, BlockedHit, RootState, GroupId } from 'types';
 import { ResourceList, Stack, DisableableAction } from '@shopify/polaris';
 import { AcceptAction, acceptHitRequestfromSearch } from 'actions/accept';

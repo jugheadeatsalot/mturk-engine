@@ -34,6 +34,7 @@ class BlockedHitCard extends React.PureComponent<
     return (
       <ResourceList.Item
         id={groupId}
+        // tslint:disable-next-line:no-console
         onClick={console.log}
         shortcutActions={actions}
       >

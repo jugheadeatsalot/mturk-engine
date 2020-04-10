@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { connect, Dispatch } from 'react-redux';
+import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
 import { RootState, WatcherTimerMap } from '../../types';
 import WatcherTree from './WatcherTree';
 import { GenericTreeNode, WatcherTreeNode } from '../../utils/tree';

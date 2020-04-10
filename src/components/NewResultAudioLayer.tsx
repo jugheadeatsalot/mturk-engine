@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { connect, Dispatch } from 'react-redux';
+import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
 import { List } from 'immutable';
 import { RootState, GroupId } from '../types';
 import { PlayAudio, playNewSearchResultAudio } from '../actions/audio';

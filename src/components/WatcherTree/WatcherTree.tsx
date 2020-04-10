@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { connect, Dispatch } from 'react-redux';
+import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
 import { Map, Set } from 'immutable';
 import { Tree, Classes } from '@blueprintjs/core';
 import { Layout, Stack, DisplayText } from '@shopify/polaris';

@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { connect, Dispatch } from 'react-redux';
+import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
 import { RootState, TOpticonSettings } from '../../types';
 import { FormUpdate, updateForm } from '../../actions/form';
 import { Slider, Classes } from '@blueprintjs/core';

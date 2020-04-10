@@ -4,7 +4,8 @@ import {
   ToggleNotifications,
   toggleNotifications
 } from '../../actions/notifications';
-import { connect, Dispatch } from 'react-redux';
+import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
 import { RootState } from '../../types';
 
 interface Handlers {

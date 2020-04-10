@@ -7,7 +7,8 @@ import {
 } from 'actions/blockRequester';
 import { Set, List } from 'immutable';
 import * as React from 'react';
-import { Dispatch, connect } from 'react-redux';
+import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
 import { BlockedRequester, RootState } from '../../types';
 import BlockedRequesterTag from './BlockedRequesterTag';
 import SweepMenu from './SweepMenu';

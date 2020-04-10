@@ -3,7 +3,8 @@ import { Requester, BlockedRequester } from '../../types';
 import { Button } from '@shopify/polaris';
 import { Tooltip, Position } from '@blueprintjs/core';
 import { blockedRequesterFactory } from '../../utils/blocklist';
-import { connect, Dispatch } from 'react-redux';
+import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
 import {
   BlockRequesterAction,
   blockSingleRequester
