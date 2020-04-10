@@ -1,6 +1,6 @@
 {
   "name": "mturk-engine",
-  "version": "1.5.0",
+  "version": "0.0.1",
   "author": {
     "name": "Shovon Hasan",
     "url": "https://www.shovonhasan.com"
@@ -42,6 +42,9 @@
     "@types/uuid": "^3.4.3",
     "react-scripts-ts": "^2.16.0",
     "react-testing-library": "^3.1.7",
+    "replace-in-file": "^5.0.2",
+    "semver": "^7.2.1",
+    "simple-git": "^1.132.0",
     "typescript": "^2.9.1"
   },
   "scripts": {
@@ -49,6 +52,7 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom --modulePaths=src",
     "eject": "react-scripts-ts eject",
-    "release": "cd ./generate-release && yarn run release"
+    "release": "cd ./generate-release && yarn run release",
+    "build:release": "yarn build && yarn release"
   }
 }

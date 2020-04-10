@@ -1,10 +1,15 @@
 import * as fs from 'fs-extra';
+import {updateVersion, gitPush} from '../versioner';
+
+const newVersion = updateVersion();
 
 const constants = {
   RAW_BUILD_FILE_FILEPATH: '../build/mturk-engine.latest.raw.user.js',
   CDN_BUILD_FILE_FILEPATH: '../build/mturk-engine.latest.user.js',
-  VERSION_NUMBER: process.argv[2]
+  VERSION_NUMBER: newVersion
 };
+
+console.log('newVersion: ', constants.VERSION_NUMBER);
 
 export const generateRelease = async () => {
   try {
@@ -16,6 +21,8 @@ export const generateRelease = async () => {
     ]);
 
     await deleteStaticDirectory();
+
+    gitPush(constants.VERSION_NUMBER);
   } catch (e) {
     // tslint:disable-next-line:no-console
     console.log(e);
@@ -58,7 +65,7 @@ const createCdnTemplate = async () => {
 
 // tslint:disable:max-line-length
 const rawUserScriptBoilerPlate = `// ==UserScript==
-// @name         Mturk Engine (Raw)
+// @name         Mturk Engine Rover (Raw)
 // @namespace    https://github.com/Anveio/mturk-engine/
 // @version      ${constants.VERSION_NUMBER}
 // @description  Earn money more efficiently on Amazon's Mechanical Turk work platform.
@@ -79,8 +86,11 @@ const rawUserScriptBoilerPlate = `// ==UserScript==
 
 `;
 
+const gitPath = `jugheadeatsalot/mturk-engine@${constants.VERSION_NUMBER}`;
+const cdnUrl = `https://cdn.jsdelivr.net/gh/${gitPath}`;
+
 const cdnUserScriptBoilerPlate = `// ==UserScript==
-// @name         Mturk Engine
+// @name         Mturk Engine Rover
 // @namespace    https://github.com/Anveio/mturk-engine/
 // @version      ${constants.VERSION_NUMBER}
 // @description  Earn money more efficiently on Amazon's Mechanical Turk work platform.
@@ -88,7 +98,7 @@ const cdnUserScriptBoilerPlate = `// ==UserScript==
 // @license      MIT
 // @match        https://worker.mturk.com/?mturkengine
 // @match        https://www.mturk.com/?mturkengine
-// @require      [[[ Replace with rawgit URL. ]]]
+// @require      ${cdnUrl}/build/mturk-engine.latest.raw.user.js?raw=true
 // @grant        none
 // ==/UserScript==
 

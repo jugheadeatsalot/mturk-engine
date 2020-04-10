@@ -18,7 +18,7 @@ export const watcherDefaults: Pick<Watcher, DefaultWatcherFields> = {
   folderId: DEFAULT_WATCHER_FOLDER_ID,
   title: 'Untitled Watcher',
   stopAfterFirstSuccess: true,
-  playSoundAfterSuccess: false
+  playSoundAfterSuccess: true
 };
 
 export const createWatcherWithInfo = (

@@ -31,7 +31,8 @@
     "webpack",
     "jest",
     "generate-release",
-    "src/setupTests.ts"
+    "src/setupTests.ts",
+    "versioner.ts"
   ],
   "types": ["typePatches"]
 }
