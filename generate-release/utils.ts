@@ -1,5 +1,7 @@
 import * as fs from 'fs-extra';
-import {updateVersion, gitPush} from '../versioner';
+import * as path from 'path';
+import * as uglifycss from 'uglifycss';
+import { updateVersion, gitPush } from '../versioner';
 
 const newVersion = updateVersion();
 
@@ -63,6 +65,8 @@ const createCdnTemplate = async () => {
   );
 };
 
+const styles = uglifycss.processFiles([`${path.join(__dirname, '../src/App.css')}`]);
+
 // tslint:disable:max-line-length
 const rawUserScriptBoilerPlate = `// ==UserScript==
 // @name         Mturk Engine Rover (Raw)
@@ -73,8 +77,10 @@ const rawUserScriptBoilerPlate = `// ==UserScript==
 // @license      MIT
 // @match        https://worker.mturk.com/?mturkengine
 // @match        https://www.mturk.com/?mturkengine
-// @grant        none
+// @grant        GM_addStyle
 // ==/UserScript==
+
+GM_addStyle(${styles});
 
 /**
  * After downloading this script visit https://worker.mturk.com/?mturkengine
@@ -99,8 +105,10 @@ const cdnUserScriptBoilerPlate = `// ==UserScript==
 // @match        https://worker.mturk.com/?mturkengine
 // @match        https://www.mturk.com/?mturkengine
 // @require      ${cdnUrl}/build/mturk-engine.latest.raw.js?raw=true
-// @grant        none
+// @grant        GM_addStyle
 // ==/UserScript==
+
+GM_addStyle(${styles});
 
 /**
  * After downloading this script visit https://worker.mturk.com/?mturkengine

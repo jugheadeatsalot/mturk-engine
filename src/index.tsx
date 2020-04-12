@@ -6,7 +6,7 @@ import { API_URL } from './constants';
 import { clearDom, createRootDiv } from './utils/config';
 import { AppProvider as PolarisProvider } from '@shopify/polaris';
 
-import './App.css';
+import './App.css'; // will get removed in production
 
 import App from './components/App';
 import { createToastLayer } from 'utils/createToastLayer';

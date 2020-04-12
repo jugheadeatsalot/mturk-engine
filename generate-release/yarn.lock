@@ -12,6 +12,11 @@
   version "9.6.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.1.tgz#e2d374ef15b315b48e7efc308fa1a7cd51faa06c"
 
+"@types/uglifycss@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@types/uglifycss/-/uglifycss-0.0.5.tgz#0f4bce299c76fad5fbd4d038595dc4c55de5d55d"
+  integrity sha1-D0vOKZx2+tX71NA4WV3ExV3l1V0=
+
 ansi-styles@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.2.1.tgz#41fbb20243e50b12be0f04b8dedbf07520ce841d"
@@ -120,6 +125,11 @@ ts-node@^5.0.1:
 typescript@^2.8.1:
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.8.1.tgz#6160e4f8f195d5ba81d4876f9c0cc1fbc0820624"
+
+uglifycss@^0.0.29:
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/uglifycss/-/uglifycss-0.0.29.tgz#abe49531155d146e75dd2fdf933d371bc1180054"
+  integrity sha512-J2SQ2QLjiknNGbNdScaNZsXgmMGI0kYNrXaDlr4obnPW9ni1jljb1NeEVWAiTgZ8z+EBWP2ozfT9vpy03rjlMQ==
 
 universalify@^0.1.0:
   version "0.1.1"

@@ -9,9 +9,6 @@
     "url": "https://github.com/Anveio/mturk-engine"
   },
   "private": true,
-  "sideEffects": [
-    "*.css"
-  ],
   "dependencies": {
     "@blueprintjs/core": "^2.3.1",
     "@shopify/polaris": "^2.2.0",

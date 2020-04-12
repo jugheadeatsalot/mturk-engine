@@ -10,12 +10,16 @@
   },
   "private": true,
   "dependencies": {
-    "fs-extra": "^5.0.0",
     "@types/fs-extra": "^5.0.1",
+    "fs-extra": "^5.0.0",
     "ts-node": "^5.0.1",
     "typescript": "^2.8.1"
   },
   "scripts": {
     "release": "ts-node ./generateRelease"
+  },
+  "devDependencies": {
+    "@types/uglifycss": "^0.0.5",
+    "uglifycss": "^0.0.29"
   }
 }
