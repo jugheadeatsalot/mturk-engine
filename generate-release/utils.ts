@@ -80,7 +80,7 @@ const rawUserScriptBoilerPlate = `// ==UserScript==
 // @grant        GM_addStyle
 // ==/UserScript==
 
-GM_addStyle(${styles});
+GM_addStyle('${styles}');
 
 /**
  * After downloading this script visit https://worker.mturk.com/?mturkengine
@@ -108,7 +108,7 @@ const cdnUserScriptBoilerPlate = `// ==UserScript==
 // @grant        GM_addStyle
 // ==/UserScript==
 
-GM_addStyle(${styles});
+GM_addStyle('${styles}');
 
 /**
  * After downloading this script visit https://worker.mturk.com/?mturkengine

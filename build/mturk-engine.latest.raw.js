@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mturk Engine Rover (Raw)
 // @namespace    https://github.com/Anveio/mturk-engine/
-// @version      0.0.2-dev.14
+// @version      0.0.2-dev.15
 // @description  Earn money more efficiently on Amazon's Mechanical Turk work platform.
 // @author       Anveio (Shovon Hasan)
 // @license      MIT
@@ -10,7 +10,7 @@
 // @grant        GM_addStyle
 // ==/UserScript==
 
-GM_addStyle(.Polaris-Select__SelectedOption{display:none}.blockedRequesterTag{display:flex;align-items:center}.blockedRequesterTag .Polaris-Tag{border-radius:0}.blockedRequesterTag .Polaris-Tag:last-child{padding-left:0}.blockedRequesterTag .Polaris-Tag__TagText{display:none});
+GM_addStyle('.Polaris-Select__SelectedOption{display:none}.blockedRequesterTag{display:flex;align-items:center}.blockedRequesterTag .Polaris-Tag{border-radius:0}.blockedRequesterTag .Polaris-Tag:last-child{padding-left:0}.blockedRequesterTag .Polaris-Tag__TagText{display:none}');
 
 /**
  * After downloading this script visit https://worker.mturk.com/?mturkengine
