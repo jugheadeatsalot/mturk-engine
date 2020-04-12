@@ -1,3 +1,20 @@
 .Polaris-Select__SelectedOption {
     display: none;
 }
+
+.blockedRequesterTag {
+    display: flex;
+    align-items: center;
+}
+
+.blockedRequesterTag .Polaris-Tag {
+    border-radius: 0;
+}
+
+.blockedRequesterTag .Polaris-Tag:last-child {
+    padding-left: 0;
+}
+
+.blockedRequesterTag .Polaris-Tag__TagText {
+    display: none;
+}

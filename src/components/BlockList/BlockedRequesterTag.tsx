@@ -9,6 +9,7 @@ import {
 } from '../../actions/blockRequester';
 
 import { truncate } from '../../utils/formatting';
+import { requesterLink } from '../../extras';
 
 export interface Props {
   readonly requester: BlockedRequester;
@@ -30,9 +31,12 @@ class BlockedHitCard extends React.PureComponent<
 
   public render() {
     return (
-      <Tag onRemove={this.handleUnblock}>
-        {truncate(this.props.requester.name, 30)}
-      </Tag>
+      <div className="blockedRequesterTag">
+        <div title={this.props.requester.name} className="Polaris-Tag">
+          {requesterLink(this.props.requester.id, truncate(this.props.requester.name, 20))}
+        </div>
+        <Tag onRemove={this.handleUnblock}/>
+      </div>
     );
   }
 }

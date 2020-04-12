@@ -61,7 +61,10 @@ class QueueItemCard extends React.PureComponent<
         >
           <Stack vertical={false} wrap={false} alignment="center">
             <Stack.Item>
-              <RequesterName requesterName={hit.requester.name} />
+            <RequesterName
+              requesterName={hit.requester.name}
+              requesterId={hit.requester.id}
+            />
             </Stack.Item>
             <Stack.Item fill>
               <Text ellipsize>{hit.title}</Text>

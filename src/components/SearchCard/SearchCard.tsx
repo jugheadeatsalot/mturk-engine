@@ -90,7 +90,10 @@ class SearchCard extends React.Component<Props & OwnProps & Handlers, never> {
               distribution="leading"
             >
               <Stack.Item>
-                <RequesterName requesterName={hit.requester.name} />
+                <RequesterName
+                  requesterName={hit.requester.name}
+                  requesterId={hit.requester.id}
+                />
               </Stack.Item>
               <Stack.Item fill>
                 <Text ellipsize>{hit.title}</Text>

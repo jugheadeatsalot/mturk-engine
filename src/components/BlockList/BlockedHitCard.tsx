@@ -4,6 +4,7 @@ import { RootState, BlockedHit } from '../../types';
 import { ResourceList, Stack, TextStyle } from '@shopify/polaris';
 import { unblockSingleHit } from 'actions/blockHit';
 import { Text } from '@blueprintjs/core';
+import { requesterLink } from '../../extras';
 
 interface Props {
   readonly blockedHit: BlockedHit;
@@ -41,7 +42,7 @@ class BlockedHitCard extends React.PureComponent<
         <Stack vertical={false} wrap={false}>
           <Stack.Item>
             <TextStyle variation="strong">
-              <Text>{requester.name}</Text>
+              <Text>{requesterLink(requester.id, requester.name)}</Text>
             </TextStyle>
           </Stack.Item>
           <Stack.Item fill>

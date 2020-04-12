@@ -2,8 +2,10 @@ import * as React from 'react';
 import { Card, TextContainer } from '@shopify/polaris';
 import { EditableText } from '@blueprintjs/core';
 import { connect } from 'react-redux';
-import { RootState } from 'types';
+import { RootState, Requester } from 'types';
 import { normalizedWatchers } from 'selectors/watchers';
+import { truncate } from '../../utils/formatting';
+import { requesterLink } from '../../extras';
 
 interface OwnProps {
   readonly watcherId: string;
@@ -12,6 +14,7 @@ interface OwnProps {
 
 interface Props {
   readonly description: string;
+  readonly requester?: Requester;
 }
 
 interface State {
@@ -44,7 +47,12 @@ class WatcherInfo extends React.PureComponent<Props & OwnProps, State> {
   public render() {
     return (
       <Card
-        title={`Description`}
+        title={this.props.requester ? (
+            <h2 className="Polaris-Heading">
+              {/* tslint:disable-next-line:max-line-length */}
+              {requesterLink(this.props.requester.id, truncate(this.props.  requester.name, 20))} {requesterLink(this.props.requester.id, this.props.  requester.id)}
+            </h2>
+        ) : 'Description'}
         actions={[
           {
             content: this.state.editable ? 'Stop editing' : 'Edit description',
@@ -66,7 +74,7 @@ class WatcherInfo extends React.PureComponent<Props & OwnProps, State> {
             />
           ) : (
             <TextContainer>
-              {this.props.description || 'No description.'}
+              <TextContainer>{this.props.description || 'No description.'}</TextContainer>
             </TextContainer>
           )}
         </Card.Section>
@@ -75,6 +83,7 @@ class WatcherInfo extends React.PureComponent<Props & OwnProps, State> {
   }
 }
 const mapState = (state: RootState, ownProps: OwnProps): Props => ({
+  requester: normalizedWatchers(state).get(ownProps.watcherId).requester,
   description: normalizedWatchers(state).get(ownProps.watcherId).description
 });
 

@@ -14,6 +14,7 @@ import { generateReviewLink } from 'utils/turkopticon';
 import { generateContactLink } from 'utils/urls';
 import { formatAsUsd } from 'utils/formatting';
 import { generateHitStatusBadge } from 'utils/badges';
+import { requesterLink } from '../../extras';
 
 interface OwnProps {
   readonly id: string;
@@ -79,7 +80,9 @@ class HitDbEntry extends React.PureComponent<Props & OwnProps, State> {
           <Stack vertical={false} wrap={false} alignment="center">
             <Stack.Item>
               <TextStyle variation="strong">
-                <Truncate>{hit.requester.name}</Truncate>
+                <Truncate>
+                  {requesterLink(hit.requester.id, hit.requester.name)}
+                </Truncate>
               </TextStyle>
             </Stack.Item>
             <Stack.Item fill>

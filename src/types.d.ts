@@ -305,6 +305,7 @@ export interface Watcher {
   readonly folderId: string;
   readonly stopAfterFirstSuccess: boolean;
   readonly playSoundAfterSuccess: boolean;
+  readonly requester?: Requester;
 }
 
 export interface WatcherTimer {

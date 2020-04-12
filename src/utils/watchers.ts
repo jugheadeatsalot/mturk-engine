@@ -29,7 +29,8 @@ export const createWatcherWithInfo = (
   groupId: hit.groupId,
   title: hit.title,
   description: generateWatcherDescription(hit),
-  createdOn: date
+  createdOn: date,
+  requester: hit.requester
 });
 
 export const pandaLinkValidators: ((i: string) => boolean)[] = [
@@ -84,6 +85,4 @@ export const defaultWatcherStats: WatcherStatistics = {
 };
 
 const generateWatcherDescription = (hit: HumanIntelligenceTask): string =>
-  `${formatAsUsd(hit.reward)} - ${hit.description} - Requester: ${
-    hit.requester.name
-  } (ID: ${hit.requester.id})`;
+  `${formatAsUsd(hit.reward)} - ${hit.description}`;
